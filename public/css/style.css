@@ -308,7 +308,16 @@ body{
 }
 
 .dashboard .move{
-    transform: translateY(-170px);
+    transform: translateY(110px);
+}
+
+.dashboard .section1{
+    position: absolute;
+    width: 100%;
+}
+
+.dash .footer{
+    transform: translateY(110px) !important;
 }
 
 .dashboard .section3 .bal{
@@ -377,4 +386,44 @@ body{
     padding-bottom: .4em;   
     color: rgb(75, 74, 74);
     display: none !important;
+}
+
+.task{
+    padding: 1em;
+    margin-top: 5em;
+}
+
+.task .transact_list{
+    border-bottom: 1px solid rgb(219, 219, 219);
+    margin-top: 1em;
+    padding-bottom: .4em;   
+    color: rgb(75, 74, 74);
+}
+
+.task .box{
+    border: 1px solid rgb(208, 208, 208);
+    padding: 1em .1em;
+    border-radius: 6px;
+}
+
+.task .box .table{
+    background-color: var(--secondary) !important;
+    --bs-table-bg :var(--secondary) !important;
+    text-align: center;
+}
+
+.task .box .table .action a{
+    background-color: var(--primary) !important;
+    color: var(--secondary);
+    padding: .1em 1em;
+    padding-bottom: .3em;
+}
+
+.task .box .table td{
+    padding: 1em !important;
+    padding-top: 1.5em !important;
+}
+
+.all_task .footer{
+    margin-top: 2em;
 }

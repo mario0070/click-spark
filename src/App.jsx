@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Link } from 'react-router-dom'
 import Login from './pages/login'
 import Register from './pages/register'
 import Dashboard from './pages/dashboard'
 import Landing from './pages/landing'
+import Task from './pages/task'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route element={<Login/>} path='/login'/>
           <Route element={<Register/>} path='/signup'/>
           <Route element={<Dashboard/>} path='/dashboard'/>
+          <Route element={<Task/>} path='/task'/>
         </Routes>
     </>
   )

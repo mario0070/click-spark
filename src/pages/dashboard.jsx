@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
+import { Route, Routes, Link } from 'react-router-dom'
 
 export default function Dashboard() {
   
@@ -14,7 +15,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
+    <div className='dash'>
       <NavBar/>
           <div className="main_content dashboard">
             <div className="section1">
@@ -35,23 +36,23 @@ export default function Dashboard() {
 
                   <div className="icons justify-content-evenly mt-4 d-flex">
                     <div className="">
-                      <div className="icon btn">
+                      <Link to="/task" className="icon btn">
                         <i class="fa-solid fa-money-bill-transfer"></i>
-                      </div>
+                      </Link>
                       <p className="text-center mt-2 text-muted text-sm">Task</p>
                     </div>
 
                     <div className="">
-                      <div className="icon btn">
+                      <Link to="/" className="icon btn">
                         <i class="fa-solid fa-arrow-up"></i>
-                      </div>
+                      </Link>
                       <p className="text-center mt-2 text-muted text-sm">Withdraw</p>
                     </div>
 
                    <div className="">
-                      <div className="icon btn">
+                      <Link to="/" className="icon btn">
                         <i class="fa-brands fa-cc-mastercard"></i>
-                      </div>
+                      </Link>
                       <p className="text-center mt-2 text-muted text-sm">Card</p>
                    </div>
 
@@ -73,7 +74,7 @@ export default function Dashboard() {
                <div className="box">
                   <h2 className="">Available Task</h2>
                   <h6 className="mb-2">3000</h6>  
-                  <a href='' className="btn">See all Available Task <i class="fa-solid fa-arrow-right"></i></a>              
+                  <Link to='/task' className="btn">See all Available Task <i class="fa-solid fa-arrow-right"></i></Link>              
                </div>
 
                <div className="box">
