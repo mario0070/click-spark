@@ -78,7 +78,7 @@ body{
 
 .main_content .section2 .box p {
     line-height: 30px;
-    color: grey;
+    color: rgb(44, 44, 44);
     font-size: 18px;
 }
 
@@ -218,7 +218,7 @@ body{
     transform: translateX(17px);
     left: 0;
     margin-top: -2.4em;
-    color: grey;
+    color: rgb(57, 57, 57);
     transition: .2s;
     font-size: 14px;
     width: fit-content;
@@ -365,7 +365,7 @@ body{
 
 .dashboard .move .box h6{
     font-size: 1.3em;
-    color: rgb(83, 83, 83);
+    color: rgb(43, 43, 43);
 }
 
 .dashboard .move .box a{
@@ -384,7 +384,7 @@ body{
     border-bottom: 1px solid rgb(219, 219, 219);
     margin-top: 1em;
     padding-bottom: .4em;   
-    color: rgb(75, 74, 74);
+    color: rgb(40, 40, 40);
     display: none !important;
 }
 
@@ -397,7 +397,7 @@ body{
     border-bottom: 1px solid rgb(219, 219, 219);
     margin-top: 1em;
     padding-bottom: .4em;   
-    color: rgb(75, 74, 74);
+    color: rgb(51, 51, 51);
 }
 
 .task .box{

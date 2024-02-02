@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-3" href="#"><i class="fa-solid fa-computer-mouse"></i> Click Spack</a>
+            <a class="navbar-brand fw-bold fs-3" href="/"><i class="fa-solid fa-computer-mouse"></i> Click Spack</a>
             <button class="navbar-toggler text-white bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
             </button>
