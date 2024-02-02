@@ -16,7 +16,7 @@ export default function Dashboard() {
                   <div className="d-flex total justify-content-between">
                     <div className="">
                       <h4 className="fw-bold mb-3 text-muted">Total Balance</h4>
-                      <h2 className="bal fw-bold">₦3,000.00</h2>
+                      <h2 className="bal fw-bold">₦93,000.00</h2>
                     </div>
                     <div className="icon btn">
                       <i class="fa-solid fa-rotate-right"></i>
