@@ -3,6 +3,16 @@ import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 
 export default function Dashboard() {
+  
+  const reloadBal = () => {
+    const rotate = document.querySelector(".rotate")
+    rotate.innerHTML = `<div class="spinner-border text-success spinner-border-sm"></div>`
+    
+    setTimeout(() => {
+      rotate.innerHTML = `<i class="fa-solid fa-rotate-right"></i>`
+    },2000)
+  }
+
   return (
     <div>
       <NavBar/>
@@ -18,7 +28,7 @@ export default function Dashboard() {
                       <h4 className="fw-bold mb-2 text-muted">Total Balance</h4>
                       <h2 className="bal fw-bold">₦93,000.00</h2>
                     </div>
-                    <div className="icon btn">
+                    <div className="icon rotate btn" onClick={reloadBal}>
                       <i class="fa-solid fa-rotate-right"></i>
                     </div>
                   </div>
