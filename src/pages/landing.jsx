@@ -5,12 +5,22 @@ import Footer from '../components/footer'
 // import banner3 from "/img/home-banner3.jpg"
 
 export default function Landing() {
+  const showFloat = () => {
+    const floating_window = document.querySelector(".floating_window")
+    floating_window.classList.toggle("show")
+  }
+
+  const removeFloat = () => {
+    const floating_window = document.querySelector(".floating_window")
+    floating_window.classList.remove("show")
+  }
+
   return (
     <div>
 
       <NavBar/>
 
-      <div className="main_content">
+      <div onClick={removeFloat} className="main_content">
           <div className="section1">
             <h2 className="mt-5 fw-bold">Get Paid for Simple Tasks! <div class="spinner-grow text-white"></div></h2>
             <p className="">Earn free cash or gift cards when you perform simple tasks, like, watch short ads,participate in simple online survey,play simple trivia games.</p>
@@ -40,6 +50,10 @@ export default function Landing() {
                 <p className="">Redeem your Points for Cash,Bitcoin,Amazon gift cards,Itunes gift cards,or 75+ other retail and restaurant partners.</p>            
             </div>
           </div>
+      </div>
+
+      <div className="floating_window">
+        <i onClick={showFloat} class="fa-solid fa-comments"></i>
       </div>
 
       <Footer/>
