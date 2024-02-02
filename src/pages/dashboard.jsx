@@ -56,18 +56,54 @@ export default function Dashboard() {
                </div>
 
                <div className="box">
+                  <h2 className="">Task Done</h2>
+                  <h6 className="">0</h6>                
+               </div>
 
+               <div className="box">
+                  <h2 className="">Available Task</h2>
+                  <h6 className="mb-2">3000</h6>  
+                  <a href='' className="btn">See all Available Task <i class="fa-solid fa-arrow-right"></i></a>              
+               </div>
+
+               <div className="box">
+                  <h2 className="">Reference Code</h2>
+                  <h6 className="">PBWHZK207095</h6>
                </div>
                <div className="box">
+                  <h2 className="">Reference Link</h2>
+                  <h6 className="">https://onlineig.com/register?code=PBWHZK207095</h6>
                 
                </div>
                <div className="box">
+                  <h2 className="">References</h2>
+                  <h6 className="">0</h6>
+               </div>
 
+               <div className="transact">
+                  <h2 className="text-center green">Transaction History</h2>
+                  <p className="text-center text-muted">Please note that our system detects fake referrals</p>
+                  <div className="box mt-3">
+                    <p className="text-center text-muted">You don't have any transaction yet!!</p>
+                    <div className="d-flex transact_list mt-0 justify-content-between">
+                      <p className="mb-0">Amount</p>
+                      <p className="mb-0">Account</p>
+                      <p className="mb-0">Date</p>
+                    </div>
+                    <div className="d-flex transact_list justify-content-between">
+                      <p className="mb-0">₦3000</p>
+                      <p className="mb-0">9138650286</p>
+                      <p className="mb-0">29, Aug</p>
+                    </div>
+                  </div>
                </div>
-               <div className="box">
-                
-               </div>
+
+
             </div>
+          </div>
+
+          <div className="floating_window">
+            <i class="fa-solid fa-comments"></i>
           </div>
 
       <Footer/>
