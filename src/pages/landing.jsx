@@ -29,11 +29,11 @@ export default function Landing() {
 
           <div className="section2">
             <div className="mt-5 text-center desc">
-              <h2 className="mt-3 text-muted fw-bold">Join millions of <strong className='green'>ClickSpark</strong> Members who have been <strong className='green'>awarded</strong></h2>
+              <h2 className="mt-3 fw-bold">Join millions of <strong className='green'>ClickSpark</strong> Members who have been <strong className='green'>awarded</strong></h2>
               <a href="/signup">Get Started Today <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <h2 className="fw-bold text-center mt-5 text-muted mb-4">How It Works</h2>
+            <h2 className="fw-bold text-center mt-5 mb-4">How It Works</h2>
             <div className="box">
                 <h3 className="fw-bold text-center">Register</h3>
                 <div className="text-center"><i class="fa-solid fa-registered"></i></div>

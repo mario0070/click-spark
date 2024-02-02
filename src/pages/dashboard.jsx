@@ -39,28 +39,28 @@ export default function Dashboard() {
                       <Link to="/task" className="icon btn">
                         <i class="fa-solid fa-money-bill-transfer"></i>
                       </Link>
-                      <p className="text-center mt-2 text-muted text-sm">Task</p>
+                      <p className="text-center mt-2 text-sm">Task</p>
                     </div>
 
                     <div className="">
                       <Link to="/" className="icon btn">
                         <i class="fa-solid fa-arrow-up"></i>
                       </Link>
-                      <p className="text-center mt-2 text-muted text-sm">Withdraw</p>
+                      <p className="text-center mt-2 text-sm">Withdraw</p>
                     </div>
 
                    <div className="">
                       <Link to="/" className="icon btn">
                         <i class="fa-brands fa-cc-mastercard"></i>
                       </Link>
-                      <p className="text-center mt-2 text-muted text-sm">Card</p>
+                      <p className="text-center mt-2 text-sm">Card</p>
                    </div>
 
                    <div className="">
                       <div className="icon btn">
                         <i class="fa-solid fa-arrow-right"></i>
                       </div>
-                      <p className="text-center mt-2 text-muted text-sm">More</p>
+                      <p className="text-center mt-2 text-sm">More</p>
                    </div>
                   </div>
 
@@ -93,7 +93,7 @@ export default function Dashboard() {
 
                <div className="transact">
                   <h2 className="text-center green">Transaction History</h2>
-                  <p className="text-center text-muted">Please note that our system detects fake referrals</p>
+                  <p className="text-center">Please note that our system detects fake referrals</p>
                   <div className="box mt-3">
                     <p className="text-center text-muted">You don't have any transaction yet!!</p>
                     <div className="d-flex transact_list mt-0 justify-content-between">
