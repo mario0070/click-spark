@@ -21,8 +21,8 @@ export default function Task() {
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>Task</th>
-                                <th>Amount</th>
+                                <th>Category</th>
+                                <th>Price</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -33,7 +33,7 @@ export default function Task() {
                                         <tr>
                                             <td>Facebook</td>
                                             <td>₦{val}.00</td>
-                                            <td className='action'><a href='/' className='btn'>Go</a></td>
+                                            <td className='action'><a href='/' className='btn'>View task</a></td>
                                         </tr>
                                     )
                                 })
