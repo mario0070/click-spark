@@ -33,7 +33,7 @@ export default function Landing() {
               <a href="/signup">Get Started Today <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <h2 className="fw-bold text-center mt-5 mb-4">How It Works</h2>
+            <h2 className="fw-bold text-center mt-5 mb-3">How It Works</h2>
             <div className="box">
                 <h3 className="fw-bold text-center">Register</h3>
                 <div className="text-center"><i class="fa-solid fa-registered"></i></div>

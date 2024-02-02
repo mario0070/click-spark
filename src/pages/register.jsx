@@ -100,7 +100,7 @@ export default function Register() {
 
       <div className="form pb-5">
         <a href="/" className='text-dark green mb-4'><h2 className="text-center mt-5 fw-bold"><i class="fa-solid fa-computer-mouse"></i> Click Spack</h2></a>
-        <h4 className="text-center text-muted fw-bold">Sign up to Continue</h4>
+        <h4 className="text-center fw-bold">Sign up to Continue</h4>
         <p className="mb-0 text-center mt-3 alt">Already have an account? <a href="/login" className='mx-2'>Login in</a></p>
 
         <form action="" onSubmit={signUp}>
