@@ -16,7 +16,7 @@ export default function Task() {
             <div className="main_content task">
                 <div className="transact">
                     <h2 className="text-center green">All Task</h2>
-                    <p className="text-center text-muted">Please note that our system detects Task that are not completed</p>
+                    <p className="text-center">Please note that our system detects Task that are not completed</p>
                     <div className="box mt-3">
                         <table class="table">
                             <thead>
