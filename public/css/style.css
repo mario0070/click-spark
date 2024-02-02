@@ -1,0 +1,113 @@
+:root{
+    --primary: rgb(50, 168, 145);
+    --secondary: azure;
+}
+
+body{
+    background-color: var(--secondary);
+}
+
+.navbar{
+    background-color: var(--primary) !important;
+}
+
+.navbar .navbar-brand{
+    color: var(--secondary);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar a:hover{
+    color: var(--secondary);
+}
+
+.navbar .nav-link{
+    color: var(--secondary);
+}
+
+.footer{
+    background-color: var(--primary);
+    width: 100%;
+    padding: 1em;
+    margin-top: 5em;
+    color: var(--secondary);
+}
+
+.main_content .section1{
+    margin-top: 2em;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 3em 1em;
+    height: 500px;
+}
+
+.main_content .section1 h2{
+    font-size: 2.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1em;
+}
+
+.main_content .section1 p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.main_content .section1 a {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: .8em 5em;
+    margin-top: 2em;
+}
+
+.main_content .section2{
+    padding: 1em;
+}
+
+.main_content .section2 .box{
+    padding: 1em;
+    box-shadow: .1em .1em 1em rgba(0, 0, 0, 0.059);
+    /* height: 300px; */
+    margin-bottom: 2em;
+    border-radius: 6px;
+}
+
+.main_content .section2 .box h3{
+    color: var(--primary);
+    margin-bottom: 1em;
+    margin-top: .5em;
+}
+
+.main_content .section2 .box p {
+    line-height: 30px;
+    color: grey;
+    font-size: 20px;
+}
+
+.main_content .section2 .box i{
+    font-size: 3em;
+    color: var(--primary);
+    margin-bottom: .5em;
+}
+
+.main_content .section2 h2{
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main_content .section2 a{
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.main_content .section2 .desc h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 45px;
+}
+
+.main_content .section2 .desc{
+    margin-bottom: 6em;
+}
+
+.main_content .green{
+    color: var(--primary);
+}
