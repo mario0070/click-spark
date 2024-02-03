@@ -12,10 +12,10 @@ export default function Bottombar() {
           </div>
 
         <div className="">
-          <a href="/" className="icon btn">
-              <i class="fa-brands fa-cc-mastercard"></i>
+          <a href="/user-profile" className="icon btn">
+              <i class="fa-solid fa-user"></i>
           </a>
-          <p className="text-center mb-0 mt-1 text-sm">Card</p>
+          <p className="text-center mb-0 mt-1 text-sm">Profile</p>
         </div>
 
         <div className="">

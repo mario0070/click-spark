@@ -51,10 +51,10 @@ export default function Dashboard() {
                     </div>
 
                    <div className="">
-                      <Link to="/" className="icon btn">
-                        <i class="fa-brands fa-cc-mastercard"></i>
+                      <Link to="/user-profile" className="icon btn">
+                        <i class="fa-solid fa-user"></i>
                       </Link>
-                      <p className="text-center mt-2 text-sm">Card</p>
+                      <p className="text-center mt-2 text-sm">Profile</p>
                    </div>
 
                    <div className="">
@@ -112,10 +112,6 @@ export default function Dashboard() {
 
 
             </div>
-          </div>
-
-          <div className="floating_window">
-            <i class="fa-solid fa-comments"></i>
           </div>
 
           <Bottombar/>

@@ -482,3 +482,30 @@ body{
     text-align: center;
     color: var(--secondary);
 }
+
+.user{
+    margin-top: 7em;
+    padding: 1em;
+    margin-bottom: 15em;
+}
+
+
+.user input{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    padding: .8em;
+    border-radius: 6px;
+    border: 1px solid rgb(168, 168, 168);
+    outline: none;
+}
+
+.user input:focus{
+    border: 1px solid var( --primary);
+}
+
+.user .btn{
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: .8em 2em;
+}
