@@ -4,11 +4,18 @@ export default function Bottombar() {
   return (
    
     <div className="fixed-bottom d-flex justify-content-evenly">
+          <div className="">
+            <a href="/dashboard" className="icon btn">
+                <i class="fa-solid fa-home"></i>
+            </a>
+            <p className="text-center mb-0 mt-1 text-sm">Home</p>
+          </div>
+
         <div className="">
-        <a href="/" className="icon btn">
-            <i class="fa-brands fa-cc-mastercard"></i>
-        </a>
-        <p className="text-center mb-0 mt-1 text-sm">Card</p>
+          <a href="/" className="icon btn">
+              <i class="fa-brands fa-cc-mastercard"></i>
+          </a>
+          <p className="text-center mb-0 mt-1 text-sm">Card</p>
         </div>
 
         <div className="">
