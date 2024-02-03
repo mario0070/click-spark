@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
+import Bottombar from '../components/bottombar'
 
 export default function Task() {
     const [test, setTest] = useState([])
 
     useEffect(() => {
         setTest([1,2,3,4,5,6,7,9,10])
-    })
+    },[])
 
     return (
         <div className='all_task'>
@@ -47,6 +48,8 @@ export default function Task() {
                     </div>
                 </div>
             </div>
+
+            <Bottombar/>
 
             <Footer/>
         </div>

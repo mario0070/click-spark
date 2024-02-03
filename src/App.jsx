@@ -5,6 +5,7 @@ import Register from './pages/register'
 import Dashboard from './pages/dashboard'
 import Landing from './pages/landing'
 import Task from './pages/task'
+import Withdraw from './pages/withdraw'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route element={<Register/>} path='/signup'/>
           <Route element={<Dashboard/>} path='/dashboard'/>
           <Route element={<Task/>} path='/task'/>
+          <Route element={<Withdraw/>} path='/withdraw'/>
         </Routes>
     </>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 import { Route, Routes, Link } from 'react-router-dom'
+import Bottombar from '../components/bottombar'
 
 export default function Dashboard() {
   
@@ -43,7 +44,7 @@ export default function Dashboard() {
                     </div>
 
                     <div className="">
-                      <Link to="/" className="icon btn">
+                      <Link to="/withdraw" className="icon btn">
                         <i class="fa-solid fa-arrow-up"></i>
                       </Link>
                       <p className="text-center mt-2 text-sm">Withdraw</p>
@@ -116,6 +117,8 @@ export default function Dashboard() {
           <div className="floating_window">
             <i class="fa-solid fa-comments"></i>
           </div>
+
+          <Bottombar/>
 
       <Footer/>
     </div>

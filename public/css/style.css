@@ -30,6 +30,7 @@ body{
     padding: 1em;
     margin-top: 5em;
     color: var(--secondary);
+    padding-bottom: 10em;
 }
 
 .main_content .section1{
@@ -426,4 +427,57 @@ body{
 
 .all_task .footer{
     margin-top: 2em;
+}
+
+.withdraw{
+    margin-top: 5em;
+    padding: 1em;
+}
+
+.withdraw .box{
+    box-shadow: .1em .1em 1em rgba(0, 0, 0, 0.112);
+    padding: 1em;
+    border-radius: 6px;
+}
+
+.withdraw .form{
+    margin-top: 2em;
+}
+
+.withdraw .form input, select{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    padding: .8em;
+    border-radius: 6px;
+    border: 1px solid rgb(168, 168, 168);
+    outline: none;
+}
+
+.withdraw .form input:focus, select:focus{
+    border: 1px solid var( --primary);
+}
+
+.withdraw .form .btn{
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: .8em 2em;
+}
+
+.fixed-bottom {
+    background-color: var(--primary);
+    padding: .4em;
+}
+
+.fixed-bottom .icon{
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: .3em .8em;
+    font-size: 1.2em;
+    border-radius: 6px;
+}
+
+.fixed-bottom p{
+    text-align: center;
+    color: var(--secondary);
 }
