@@ -111,7 +111,7 @@ export default function Dashboard() {
 
                 <div className="box">
                     <h2 className="">References</h2>
-                    <h6 className="">{user.total_ref}</h6>
+                    <p className="">{user.total_ref}</p>
                 </div>
 
                 <div className="transact">
