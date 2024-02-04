@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { CookiesProvider, useCookies } from "react-cookie";
+import axios from '../utils/axios';
 
 export default function Login() {
   const [email, setEmail] = useState("")
@@ -46,12 +47,13 @@ export default function Login() {
     e.preventDefault()
     var submitbtn = document.querySelector(".submitbtn")
     submitbtn.innerHTML = `<div class="spinner-border spinner-border-sm"></div>`
-    axios.post("/user/login", {
+    axios.post("/earn/login", {
       email : userEmail.current.value,
       password : userPassword.current.value,
     })
     .then(res => {
-      setCookie("user",res.data.user)
+      console.log(res)
+      setCookie("SparkUser",res.data.user)
       alert("success", "User is login")
       window.location.href = "/dashboard"
     })

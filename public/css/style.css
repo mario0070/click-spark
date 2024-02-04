@@ -509,3 +509,11 @@ body{
     color: var(--secondary);
     padding: .8em 2em;
 }
+
+.navbar .log_out{
+    width: fit-content;
+    padding: .5em 1em;
+    margin-top: 1em;
+    padding-bottom: .8em;
+    float: right;
+}
