@@ -4,14 +4,11 @@ import Footer from '../components/footer'
 import { Route, Routes, Link, redirect } from 'react-router-dom'
 import Bottombar from '../components/bottombar'
 import { useCookies } from 'react-cookie'
+import axios from '../utils/axios'
 
 export default function Dashboard() {
   const [cookie, setCookie, removeCookie] = useCookies("")
   const [user, setUser] = useState(cookie.SparkUser ??  "")
-
-  // useEffect(() => {
-  //   console.log(user)
-  // })
   
   const reloadBal = () => {
     const rotate = document.querySelector(".rotate")
@@ -23,6 +20,21 @@ export default function Dashboard() {
   }
 
   if(user){
+
+    useEffect(() => {
+      axios.get("/earn",)
+      .then(res => {
+        res.data.users.forEach(val => {
+          if(val.email == user.email){
+            setUser(val)
+          }
+        })
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },[user])
+
     return (
       <div className='dash'>
         <NavBar/>
@@ -32,10 +44,10 @@ export default function Dashboard() {
 
               <div className="move">
                 <div className="section3">
-                    <h2 className="fw-bold name mb-3 text-capitalize">Hi {user.fullname.split(" ")[1]}</h2>
+                    <p className="fw-bold name mb-3 text-capitalize">Hi {user.fullname.split(" ")[1]}</p>
                     <div className="d-flex total justify-content-between">
                       <div className="">
-                        <h4 className="fw-bold mb-2">Total Balance</h4>
+                        <p className="fw-bold mb-2">Total Balance</p>
                         <h2 className="bal fw-bold">₦{user.balance}.00</h2>
                       </div>
                       <div className="icon rotate btn" onClick={reloadBal}>
@@ -77,23 +89,23 @@ export default function Dashboard() {
 
                 <div className="box">
                     <h2 className="">Task Done</h2>
-                    <h6 className="">{user.taskTotal}</h6>                
+                    <p className="">{user.taskTotal}</p>                
                 </div>
 
                 <div className="box">
                     <h2 className="">Available Task</h2>
-                    <h6 className="mb-2">3000</h6>  
+                    <p className="mb-2">3000</p>  
                     <Link to='/task' className="btn">See all Available Task <i class="fa-solid fa-arrow-right"></i></Link>              
                 </div>
 
                 <div className="box">
                     <h2 className="">Reference Code</h2>
-                    <h6 className="">{user.ref_code ?? "N/A"}</h6>
+                    <p className="">{user.ref_code ?? "N/A"}</p>
                 </div>
 
                 <div className="box">
                     <h2 className="">Reference Link</h2>
-                    <h6 className="">{window.location.origin + "/signup?ref=" + user.ref_code}</h6>
+                    <p className="code"><a target="_blank" href={window.location.origin + "/signup?ref=" + user.ref_code.split(" ")[1]}>{window.location.origin + "/signup?ref=" + user.ref_code}</a></p>
                   
                 </div>
 

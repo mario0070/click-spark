@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useCookies } from 'react-cookie'
 import axios from '../utils/axios'
+import { useSearchParams } from 'react-router-dom'
 
 export default function Register() {
   const [cookie, setCookie] = useCookies("")
@@ -12,6 +13,9 @@ export default function Register() {
   const username= useRef("")
   const userPassword = useRef("")
   const confirm_password = useRef("")
+  const [searchParams, setSearchParams] = useSearchParams();
+  const ref = searchParams.get("ref")
+ 
 
   useEffect(() => {
     var focus = document.querySelectorAll(".focus")
@@ -56,7 +60,7 @@ export default function Register() {
     }
     var submitbtn = document.querySelector(".submitbtn")
     submitbtn.innerHTML = `<div class="spinner-border spinner-border-sm"></div>`
-    axios.post("/earn/signup", {
+    axios.post(`/earn/signup?ref=${ref}`, {
       email : userEmail.current.value,
       phone : userPhone.current.value,
       fullname : username.current.value,

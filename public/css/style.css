@@ -30,7 +30,7 @@ body{
     padding: 1em;
     margin-top: 5em;
     color: var(--secondary);
-    padding-bottom: 10em;
+    padding-bottom: 6em;
 }
 
 .main_content .section1{
@@ -335,6 +335,10 @@ body{
     text-align: center;
 }
 
+.dashboard .section3 .icons p{
+    font-size: 12px;
+}
+
 .dashboard .section3 .total{
     padding-top: 2em;
     border-bottom: 1px solid rgb(211, 211, 211);
@@ -467,20 +471,20 @@ body{
 .fixed-bottom {
     background-color: var(--primary);
     padding: .4em;
-    padding-top: .6em;
 }
 
 .fixed-bottom .icon{
     background-color: var(--secondary);
     color: var(--primary);
-    padding: .3em .8em;
-    font-size: 1em;
+    padding: .2em .9em;
+    font-size: .8em;
     border-radius: 6px;
 }
 
 .fixed-bottom p{
     text-align: center;
     color: var(--secondary);
+    font-size: 12px;
 }
 
 .user{
@@ -516,4 +520,9 @@ body{
     margin-top: 1em;
     padding-bottom: .8em;
     float: right;
+}
+
+.dashboard .code a {
+    background-color: transparent !important;
+    color: rgb(113, 113, 204) !important;
 }
