@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useCookies } from 'react-cookie'
+import axios from '../utils/axios'
 
 export default function Register() {
   const [cookie, setCookie] = useCookies("")
@@ -10,9 +11,6 @@ export default function Register() {
   const userPhone= useRef("")
   const username= useRef("")
   const userPassword = useRef("")
-  const userAddress= useRef("")
-  const userBusiness_name = useRef("")
-  const userRole = useRef(role)
   const confirm_password = useRef("")
 
   useEffect(() => {
@@ -58,23 +56,19 @@ export default function Register() {
     }
     var submitbtn = document.querySelector(".submitbtn")
     submitbtn.innerHTML = `<div class="spinner-border spinner-border-sm"></div>`
-    const name = username.current.value.split(" ")
-    axios.post("/user/signup", {
+    axios.post("/earn/signup", {
       email : userEmail.current.value,
       phone : userPhone.current.value,
-      address : userAddress.current.value,
-      business_name : userBusiness_name.current.value,
-      role : userRole.current.value,
-      firstname : name[0],
-      lastname : name[1],
+      fullname : username.current.value,
       password : userPassword.current.value,
     })
     .then(res => {
+      console.log(res)
       if(res.data.message == "user already exist"){
         alert("error", res.data.message)
       }else{
         alert("success", "signup was successful")
-        setCookie("user", res.data.user)
+        setCookie("SparkUser", res.data.user)
         window.location.href = "/dashboard"
       }
       submitbtn.innerHTML = `Sign up`
@@ -84,11 +78,6 @@ export default function Register() {
       console.log(err)
       submitbtn.innerHTML = `Sign up`
     })
-  }
-
-  const setRole = (role) => {
-    setrole(role)
-    console.log(role)
   }
 
 

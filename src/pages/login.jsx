@@ -52,7 +52,6 @@ export default function Login() {
       password : userPassword.current.value,
     })
     .then(res => {
-      console.log(res)
       setCookie("SparkUser",res.data.user)
       alert("success", "User is login")
       window.location.href = "/dashboard"
