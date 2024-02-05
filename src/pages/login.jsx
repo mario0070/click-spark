@@ -63,6 +63,23 @@ export default function Login() {
     })
   }
 
+  const googlelogIn = e => {
+    e.preventDefault()
+    console.log("yea")
+    axios.get("/auth/google")
+    .then(res => {
+      console.log(res)
+      // setCookie("SparkUser",res.data.user)
+      // alert("success", "User is login")
+      // window.location.href = "/dashboard"
+    })
+    .catch(err => {
+      alert("error", "invalid credentials")
+      console.log(err)
+    })
+  }
+  
+
 
   return (
     <div className='login d-flex'>
@@ -93,8 +110,8 @@ export default function Login() {
            
             <p className="text-center mt-4">Or sign up using </p>
             <div className="social d-flex text-center">
-              <p className="mb-0"><i class="fa-brands fa-google text-danger"></i></p>
-              <p className="mb-0 mx-4"><i class="fa-brands fa-facebook text-primary"></i></p>
+              <p className="mb-0 btn bg-danger p-3" onClick={googlelogIn}><i class="fa-brands fa-google text-white"></i></p>
+              {/* <p className="mb-0 mx-4"><i class="fa-brands fa-facebook text-primary"></i></p> */}
             </div>
         </div>
       </div>
