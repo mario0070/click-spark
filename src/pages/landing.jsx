@@ -54,6 +54,8 @@ export default function Landing() {
             <div className="imgs">
               <img src="https://fortunable.com/wp-content/uploads/2023/09/Transfer-money-quickly-17.jpg" alt="" />
             </div>
+
+            <a href="/login" className='btn mt-3 below_img'>Join Now</a>
             
             <h2 className="fw-bold text-center pt-5 mt-5 mb-3">Who can benefit from <span className="green">Click Spack</span>?</h2>
             <div className="box">
@@ -73,12 +75,13 @@ export default function Landing() {
             </div>
             <div className="imgs mb-4"><img src="https://fortunable.com/wp-content/uploads/2023/09/pexels-fauxels-3184339-18.jpg" alt="" /></div>
 
-            <div className="box">
+            <div className="box mb-1">
                 <h3 className="fw-bold text-center text-uppercase">Fast payout every time</h3>
                 <div className="text-center"><i class="fa-solid fa-coins"></i></div>
               <p className=""><span className="green">Click Spack</span> offers an easy way to earn real cash and transfer it right to your online pocket. Each survey you complete on our platform will increase your earnings even more.
 Once you reach the payment threshold, you have the flexibility to withdraw your money directly to PayPal or Paysera with just one click. There is also an option to get paid in vouchers and you can even donate your money to a worthy cause. The choice is yours! Whether you want to make money as a student or stay-at-home parent, <span className="green">Click Spack</span> is the place for you.</p>
             </div>
+            <a href="/login" className='btn mb-5 mt-3 below_img'>Get Started</a>
 
 
           </div>

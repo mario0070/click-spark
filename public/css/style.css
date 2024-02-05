@@ -83,6 +83,12 @@ body{
     border-radius: 6px;
 }
 
+.section2 .below_img{
+    background-color: var(--primary);
+    color: var(--secondary) !important;
+    padding: .4em 1em;
+}
+
 .land .footer{
     padding-bottom: 1em;
     margin-top: 0em;
