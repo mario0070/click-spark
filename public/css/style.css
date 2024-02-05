@@ -88,6 +88,10 @@ body{
     margin-top: 0em;
 }
 
+.land .section1{
+    height: fit-content;
+}
+
 .main_content .section2 .box h3{
     color: var(--primary);
     margin-bottom: 1em;
