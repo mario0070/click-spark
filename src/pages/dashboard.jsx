@@ -104,6 +104,12 @@ export default function Dashboard() {
                 </div>
 
                 <div className="box">
+                    <h2 className="">Notice!!</h2>
+                    <p className="mb-0">You will Earn ₦600 per active user you refer, and also Earn ₦200 when your references refer another user.</p>
+                    <p className="">Performing fake referral will lead to termination of your account.</p>
+                </div>
+
+                <div className="box">
                     <h2 className="">Reference Link</h2>
                     <p className="code"><a target="_blank" href={window.location.origin + "/signup?ref=" + user.ref_code.split(" ")[1]}>{window.location.origin + "/signup?ref=" + user.ref_code}</a></p>
                   

@@ -63,12 +63,29 @@ body{
     padding: 1em;
 }
 
+.main_content .section2 .imgs{
+    width: 100%;
+    border-radius: 6px;
+    background-color: rgb(240, 240, 240);
+    overflow: hidden;
+    height: 250px;
+}
+
+.main_content .section2 img{
+    width: 100%;
+}
+
 .main_content .section2 .box{
     padding: 1em;
     box-shadow: .1em .1em 1em rgba(0, 0, 0, 0.107);
     /* height: 300px; */
     margin-bottom: 2em;
     border-radius: 6px;
+}
+
+.land .footer{
+    padding-bottom: 1em;
+    margin-top: 0em;
 }
 
 .main_content .section2 .box h3{
