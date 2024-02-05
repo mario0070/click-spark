@@ -8,6 +8,9 @@ export default function Login() {
   const userEmail = useRef("")
   const userPassword = useRef("")
   const [cookie, setCookie] = useCookies("")
+  const CLIENT_ID = '1089248889378-hib3g0kdhtnc04u3osqh0inrj49h8ga5.apps.googleusercontent.com';
+  const CLIENT_SECRET = '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';
+  const REDIRECT_URI = 'http://localhost:3000/auth/google/callback';
   
   useEffect(() => {
     var focus = document.querySelectorAll(".focus")
@@ -65,20 +68,22 @@ export default function Login() {
 
   const googlelogIn = e => {
     e.preventDefault()
-    console.log("yea")
+    const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=profile email`;
+    window.location.href = url
+    return
+
     axios.get("/auth/google")
     .then(res => {
       console.log(res)
       // setCookie("SparkUser",res.data.user)
       // alert("success", "User is login")
-      // window.location.href = "/dashboard"
+      window.location.href = res.data.url
     })
     .catch(err => {
       alert("error", "invalid credentials")
       console.log(err)
     })
   }
-  
 
 
   return (
