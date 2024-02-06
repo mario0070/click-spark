@@ -7,6 +7,7 @@ import Landing from './pages/landing'
 import Task from './pages/task'
 import Withdraw from './pages/withdraw'
 import User from './pages/user'
+import Forgotpassword from './pages/forgotpassword'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route element={<Dashboard/>} path='/dashboard'/>
           <Route element={<Task/>} path='/task'/>
           <Route element={<Withdraw/>} path='/withdraw'/>
+          <Route element={<Forgotpassword/>} path='/forgot-password'/>
           <Route element={<User/>} path='/user-profile'/>
         </Routes>
     </>

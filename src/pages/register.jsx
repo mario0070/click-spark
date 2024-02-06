@@ -123,11 +123,11 @@ export default function Register() {
                 <button className='btn submitbtn'>Sign up</button>
             </div>
             
-              <p className="text-center mt-4">Or sign up using </p>
+              {/* <p className="text-center mt-4">Or sign up using </p>
               <div className="social d-flex text-center">
                 <p className="mb-0"><i class="fa-brands fa-google text-danger"></i></p>
                 <p className="mb-0 mx-4"><i class="fa-brands fa-facebook text-primary"></i></p>
-              </div>
+              </div> */}
           </div>
         </form>
       </div>

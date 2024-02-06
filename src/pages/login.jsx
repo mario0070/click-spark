@@ -79,7 +79,7 @@ export default function Login() {
         console.log(res)
         setCookie("SparkUser",res.data.data[0])
         alert("success", "User is login")
-        window.location.href = "/dashboard"
+        // window.location.href = "/dashboard"
       })
       .catch(err => {
         alert("error", "Something went wrong")
@@ -117,16 +117,16 @@ export default function Login() {
                   <p className='move_up'>Password</p>
               </div>
               <div className="text-center">
-                  <a href="">Forgot Password?</a>
+                  <a href="/forgot-password">Forgot Password?</a>
                   <button className='btn submitbtn'>Login</button>
               </div>
            </form>
            
-            <p className="text-center mt-4">Or sign up using </p>
+            {/* <p className="text-center mt-4">Or sign up using </p>
             <div className="social d-flex text-center">
               <p className="mb-0 google btn bg-danger p-1" onClick={googlelogIn}><i class="fa-brands fa-google text-white"></i></p>
-              {/* <p className="mb-0 mx-4"><i class="fa-brands fa-facebook text-primary"></i></p> */}
-            </div>
+              <p className="mb-0 mx-4"><i class="fa-brands fa-facebook text-primary"></i></p>
+            </div> */}
         </div>
       </div>
     </div>
