@@ -8,9 +8,18 @@ export default function Task() {
     const [test, setTest] = useState([])
     const [cookie, setCookie, removeCookie] = useCookies("")
     const [user, setUser] = useState(cookie.SparkUser ??  "")
+    var [countdownNum, setcountdown] = useState(60)
 
     useEffect(() => {
-        setTest([1,2,3,4,5,6,7,9,10])
+        setTest([1,2,3,4])
+        const countdown = setInterval(() => {
+            setcountdown(countdownNum--)
+            console.log(countdownNum)
+
+            if (countdownNum <= 0) {
+                clearInterval(countdown);
+            }
+        }, 1000);
     },[])
 
     if(user){
@@ -19,38 +28,31 @@ export default function Task() {
                 <NavBar/>
 
                 <div className="main_content task">
-                    <div className="transact">
-                        <h2 className="text-center green">All Task</h2>
-                        <p className="text-center">Please note that our system detects Task that are not completed</p>
-                        <div className="box mt-3">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Category</th>
-                                    <th>Price</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {
-                                    test.map(val => {
-                                        return (
-                                            <tr>
-                                                <td>Facebook</td>
-                                                <td>₦{val}.00</td>
-                                                <td className='action'><a href='/' className='btn'>View task</a></td>
-                                            </tr>
-                                        )
-                                    })
-                                }
-                                </tbody>
-                            </table>
+                   <div className="mt-3">
+                        <div className="question">
+                            <h4 className="count">{countdownNum}</h4>
+                            <h4 className='mt-2'>What is your name?</h4>
                         </div>
-                        <div className="continue mt-5">
-                            <p className="text-end fw-bold fs-4 green">Continue
-                            <i class="fa-solid fa-arrow-right mx-2"></i></p>
+
+                        <div className="mt-5 answer">
+                            {
+                                test.map((val,index) => {
+                                    return (
+                                        <div className="answers">
+                                            <div className="d-flex justify-content-between">
+                                                <h6 className="mb-0">{index + 1}:) jamiu</h6>
+                                                <p className="round green"><i class="fa-solid fa-check"></i></p>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                           <div className="d-flex">
+                                <button className="btn"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+                                <button className="btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+                           </div>
                         </div>
-                    </div>
+                   </div>
                 </div>
 
                 <Bottombar/>

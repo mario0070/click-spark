@@ -426,35 +426,68 @@ body{
     margin-top: 5em;
 }
 
-.task .transact_list{
-    border-bottom: 1px solid rgb(219, 219, 219);
-    margin-top: 1em;
-    padding-bottom: .4em;   
-    color: rgb(51, 51, 51);
-}
-
-.task .box{
-    border: 1px solid rgb(208, 208, 208);
-    padding: 1em .1em;
+.task .question{
+    background-color: rgba(50, 168, 144, 0.178);
+    padding: 4em 1em;
     border-radius: 6px;
-}
-
-.task .box .table{
-    background-color: var(--secondary) !important;
-    --bs-table-bg :var(--secondary) !important;
     text-align: center;
+    position: relative;
 }
 
-.task .box .table .action a{
-    background-color: var(--primary) !important;
+.task .answers{
+    padding: 1.4em;
+    border-radius: 6px;
+    box-shadow: .1em .1em 1em rgba(0, 0, 0, 0.098);
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.task .answers.choose{
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.task .answers.choose .round{
+    display: inline;
+}
+
+.task .question .count{
+    background-color: var(--secondary);
+    padding: 1em;
+    border-radius: 50%;
+    width: 80px;
+    margin: auto auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    transform: translateY(-20px);
+    border: 5px solid var(--primary);
+}
+
+.task .answer .btn{
+    background-color: var(--primary);
     color: var(--secondary);
-    padding: .1em 1em;
-    padding-bottom: .3em;
+    width: 100%;
+    margin: 1em;
+    margin-top: 2em;
 }
 
-.task .box .table td{
-    padding: 1em !important;
-    padding-top: 1.5em !important;
+.task .answer .round{
+    background-color: var(--secondary);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    padding: .2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-15px) translateY(15px);
+    display: none;
 }
 
 .all_task .footer{
