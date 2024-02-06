@@ -29,8 +29,10 @@ export default function Landing() {
 
           <div className="section2">
             <div className="mt-5 text-center desc">
-              <h2 className="mt-3 fw-bold">Join millions of <strong className='green'>ClickSpark</strong> Members who have been <strong className='green'>awarded</strong></h2>
-              <div className="imgs mb-2"><img src="https://fortunable.com/wp-content/uploads/2023/09/Friends-completing-surveys-21.jpg" alt="" /></div>
+              <h2 className="mt-3 fw-bold">Join <strong className='green'>Click Spark</strong> Today</h2>
+              <div className="imgs">
+                <img src="https://fortunable.com/wp-content/uploads/2023/09/Transfer-money-quickly-17.jpg" alt="" />
+              </div>
               <a href="/signup">Get Started Today <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
@@ -51,9 +53,8 @@ export default function Landing() {
                 <p className="">Our surveys are simple and fun. There are no right or wrong answers. We just want to hear your opinion about various products and services.</p>            
             </div>
 
-            <div className="imgs">
-              <img src="https://fortunable.com/wp-content/uploads/2023/09/Transfer-money-quickly-17.jpg" alt="" />
-            </div>
+            
+            <div className="imgs mb-2"><img src="https://fortunable.com/wp-content/uploads/2023/09/Friends-completing-surveys-21.jpg" alt="" /></div>
 
             <a href="/login" className='btn mt-3 below_img'>Join Now</a>
             
