@@ -466,7 +466,7 @@ body{
     border: 5px solid var(--primary);
 }
 
-.task .answer .btn{
+.task .actions .btn{
     background-color: var(--primary);
     color: var(--secondary);
     width: 100%;
