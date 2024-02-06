@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { CookiesProvider, useCookies } from "react-cookie";
 import axios from '../utils/axios';
+import { useSearchParams } from 'react-router-dom'
 
 export default function Login() {
   const [email, setEmail] = useState("")
@@ -10,7 +11,9 @@ export default function Login() {
   const [cookie, setCookie] = useCookies("")
   const CLIENT_ID = '1089248889378-hib3g0kdhtnc04u3osqh0inrj49h8ga5.apps.googleusercontent.com';
   const CLIENT_SECRET = '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';
-  const REDIRECT_URI = 'http://localhost:3000/auth/google/callback';
+  const REDIRECT_URI = 'http://127.0.0.1:5174/login';
+  const [searchParams, setSearchParams] = useSearchParams();
+  const code = searchParams.get("code")
   
   useEffect(() => {
     var focus = document.querySelectorAll(".focus")
@@ -66,23 +69,28 @@ export default function Login() {
     })
   }
 
+  useEffect(() => {
+    if(code){
+      axios.get(`/auth/google/callback?code=${code}`,)
+      .then(res => {
+        console.log(res)
+        if(res){
+          console.log("yea")
+        }
+        // setCookie("SparkUser",res.data.user)
+        // alert("success", "User is login")
+        // window.location.href = "/dashboard"
+      })
+      .catch(err => {
+        alert("error", "Something went wrong")
+        console.log(err)
+      })
+    }
+  },[])
+
   const googlelogIn = e => {
-    e.preventDefault()
     const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=profile email`;
     window.location.href = url
-    return
-
-    axios.get("/auth/google")
-    .then(res => {
-      console.log(res)
-      // setCookie("SparkUser",res.data.user)
-      // alert("success", "User is login")
-      window.location.href = res.data.url
-    })
-    .catch(err => {
-      alert("error", "invalid credentials")
-      console.log(err)
-    })
   }
 
 
@@ -115,7 +123,7 @@ export default function Login() {
            
             <p className="text-center mt-4">Or sign up using </p>
             <div className="social d-flex text-center">
-              <p className="mb-0 btn bg-danger p-3" onClick={googlelogIn}><i class="fa-brands fa-google text-white"></i></p>
+              <p className="mb-0 btn bg-danger p-1" onClick={googlelogIn}><i class="fa-brands fa-google text-white"></i></p>
               {/* <p className="mb-0 mx-4"><i class="fa-brands fa-facebook text-primary"></i></p> */}
             </div>
         </div>
