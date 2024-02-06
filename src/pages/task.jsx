@@ -8,18 +8,21 @@ export default function Task() {
     const [test, setTest] = useState([])
     const [cookie, setCookie, removeCookie] = useCookies("")
     const [user, setUser] = useState(cookie.SparkUser ??  "")
-    var [countdownNum, setcountdown] = useState(60)
+    var [countdownNum, setcountdown] = useState(15)
 
     useEffect(() => {
         setTest([1,2,3,4])
-        const countdown = setInterval(() => {
-            setcountdown(countdownNum--)
-            console.log(countdownNum)
 
-            if (countdownNum <= 0) {
+        let countdownValue = 15;
+        const countdown = setInterval(function() {
+            document.getElementById('timer').textContent = countdownValue;
+
+            countdownValue--;
+            if (countdownValue < 0) {
                 clearInterval(countdown);
+                document.getElementById('timer').textContent = 0;
             }
-        }, 1000);
+        }, 1000)
     },[])
 
     if(user){
@@ -30,7 +33,7 @@ export default function Task() {
                 <div className="main_content task">
                    <div className="mt-3">
                         <div className="question">
-                            <h4 className="count">{countdownNum}</h4>
+                            <h4 className="count" id='timer'>{countdownNum}</h4>
                             <h4 className='mt-2'>What is your name?</h4>
                         </div>
 
