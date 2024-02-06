@@ -76,12 +76,13 @@ export default function Login() {
 
       axios.get(`/auth/google/callback?code=${code}`,)
       .then(res => {
+        console.log(res)
         setCookie("SparkUser",res.data.data[0])
         alert("success", "User is login")
         window.location.href = "/dashboard"
       })
       .catch(err => {
-        // alert("error", "Something went wrong")
+        alert("error", "Something went wrong")
         console.log(err)
         google.innerHTML = `<i class="fa-brands fa-google text-white"></i>`
       })
