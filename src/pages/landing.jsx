@@ -23,7 +23,7 @@ export default function Landing() {
       <div onClick={removeFloat} className="main_content">
           <div className="section1">
             <h2 className="mt-5 fw-bold">Get Paid for Simple Tasks! <div class="spinner-grow text-white"></div></h2>
-            <p className="">Welcome to Click Spack – a special place where your opinions pay. We offer a wide range of online paid surveys that help you turn your spare time into extra income. With each completed survey, you will earn money online.</p>
+            <p className="">Welcome to Click Spack – a special place where your opinions pay. We offer a wide range of online paid surveys that help you turn your spare time into extra income.</p>
             <a href='/signup' className='btn'>Get Started</a>
           </div>
 

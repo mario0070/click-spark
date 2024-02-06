@@ -55,7 +55,7 @@ body{
 .main_content .section1 a {
     background-color: var(--secondary);
     color: var(--primary);
-    padding: .8em 5em;
+    padding: .6em 2em;
     margin-top: 2em;
 }
 
@@ -86,7 +86,8 @@ body{
 .section2 .below_img{
     background-color: var(--primary);
     color: var(--secondary) !important;
-    padding: .4em 1em;
+    padding: .6em 1em;
+    font-size: 1em !important;
 }
 
 .land .footer{
