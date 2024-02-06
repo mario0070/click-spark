@@ -77,12 +77,12 @@ export default function Login() {
         if(res){
           console.log("yea")
         }
-        // setCookie("SparkUser",res.data.user)
-        // alert("success", "User is login")
-        // window.location.href = "/dashboard"
+        setCookie("SparkUser",res.data.data[0])
+        alert("success", "User is login")
+        window.location.href = "/dashboard"
       })
       .catch(err => {
-        alert("error", "Something went wrong")
+        // alert("error", "Something went wrong")
         console.log(err)
       })
     }
