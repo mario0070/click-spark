@@ -71,12 +71,11 @@ export default function Login() {
 
   useEffect(() => {
     if(code){
+      var google = document.querySelector(".google")
+      google.innerHTML = `<div class="spinner-border text-white p-2 spinner-border-sm"></div>`
+
       axios.get(`/auth/google/callback?code=${code}`,)
       .then(res => {
-        console.log(res)
-        if(res){
-          console.log("yea")
-        }
         setCookie("SparkUser",res.data.data[0])
         alert("success", "User is login")
         window.location.href = "/dashboard"
@@ -84,6 +83,7 @@ export default function Login() {
       .catch(err => {
         // alert("error", "Something went wrong")
         console.log(err)
+        google.innerHTML = `<i class="fa-brands fa-google text-white"></i>`
       })
     }
   },[])
@@ -123,7 +123,7 @@ export default function Login() {
            
             <p className="text-center mt-4">Or sign up using </p>
             <div className="social d-flex text-center">
-              <p className="mb-0 btn bg-danger p-1" onClick={googlelogIn}><i class="fa-brands fa-google text-white"></i></p>
+              <p className="mb-0 google btn bg-danger p-1" onClick={googlelogIn}><i class="fa-brands fa-google text-white"></i></p>
               {/* <p className="mb-0 mx-4"><i class="fa-brands fa-facebook text-primary"></i></p> */}
             </div>
         </div>
